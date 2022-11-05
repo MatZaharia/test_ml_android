@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomePage</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../static/css/style_homepage_4.css">
+    <link rel="icon" href="../static/css/image/1.ico"/>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- 引用他人的alert样式 -->
+    <link rel="stylesheet" type="text/css" href="../static/css/sweetalert.css">
+    <script type="text/javascript" src="../static/js/sweetalert-dev.js"></script>
+
+    <!-- bootstrapValidator 输入验证库 -->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/bootstrap-validator/0.5.3/js/bootstrapValidator.min.js"></script>
+
+    <!-- JS -->
+    <script src="../static/js/script_homepage_1.js"></script>
+</head>
+<div class="token" id="token" style="display: none">{{token}}</div>
+<div id="frame">
+    <div id="image" style="transform: scale(0.8); position: absolute;left: 50px; top: 10px;"><img src="../static/css/image/icon1.png"></div>
+    <div id="text">异步联邦学习管理者系统</div>
+    <div id="text1">您好！&nbsp{{name}}</div>
+</div>
+<div id="option">
+    <div class="option_box">
+        <div id="image" style="transform: scale(0.7);"><img src="../static/css/image/icon2.png"></div>
+        <button class="button_source" id="home" style="color: black;" onclick="show_home()">我的首页</button>
+        <div id="image1" style="transform: scale(0.7);" onclick="show_home()"><img src="../static/css/image/icon6.png"></div>
+    </div>
+    <button class="button_source1" id="task_deploy" onclick="show_task_deploy()" style="color: black; margin-top: -10px; display: none;">部署任务</button>
+    <button class="button_source1" id="uploaded_model" onclick="salert()" style="color: black; margin-left: 120px; display: none;">已上传模型</button>
+    <button class="button_source1" id="client_reward" onclick="salert()" style="color: black; margin-left: 120px; display: none;">参与者奖励</button>
+    <div class="option_box">
+        <div id="image" style="transform: scale(0.7); margin-left: 33px;"><img src="../static/css/image/icon3.png"></div>
+        <button class="button_source" id="infolist" onclick="show_infolist()">信息列表</button>
+        <div id="image1" style="transform: scale(0.7);" onclick="show_infolist()"><img src="../static/css/image/icon6.png"></div>
+    </div>
+    <button class="button_source2" id="global_model" onclick="show_global_model()" style="color: black; margin-top: -10px; display: none;">全局模型</button>
+    <button class="button_source2" id="weight" onclick="salert()" style="color: black; display: none;">权重摘要</button>
+    <button class="button_source2" id="train_client" onclick="show_clientinfo()" style="color: black; margin-left: 120px; display: none;">训练参与者</button>
+    <div class="option_box">
+        <div id="image" style="transform: scale(0.7);"><img src="../static/css/image/icon4.png"></div>
+        <button class="button_source" id="tasklist" style="color: dodgerblue; margin-left: -23px" onclick="show_tasklist()">任务列表</button>
+    </div>
+    <div class="option_box">
+        <div id="image" style="transform: scale(0.7);"><img src="../static/css/image/icon5.png"></div>
+        <button class="button_source" id="user" style="margin-left: -13px" onclick="show_userpage()">管理者信息</button>
+    </div>
+</div>
+<div id="message">
+    <div id="text" style="color: #333333">任务列表</div>
+</div>
+<div class="main" id="request" name="request">
+    <div id="Request1">
+        <div id="text">请求一</div>
+        <button class="button_source" id="seting_strategy1" onclick="show_seting(event)">设置策略</button>
+        <div id="text1">请求信息</div>
+        <div id="frame1">
+            <div class="item1" id="file_name">名称：</div>
+            <div class="item2" id="servicename1">Service</div>
+        </div>
+        <div id="frame1" style="background-color: white">
+            <div class="item1" id="file_name">简介：</div>
+            <div class="item2" id="servicebrief1">trainable</div>
+        </div>
+        <div id="frame1">
+            <div class="item1" id="file_name">细节：</div>
+            <div class="item2" id="servicedetail1" style="width: 250px; margin-left: 25px;">Service1 able to be trained</div>
+        </div>
+        <div id="frame1" style="background-color: white">
+            <div class="item1" id="file_name">奖励：</div>
+            <div class="item2" id="server_id">None</div>
+        </div>
+        <div id="frame1">
+            <div class="item1" id="file_name">已工作时间：</div>
+            <div class="item2" id="server_id">120s</div>
+        </div>
+        <div id="frame1" style="background-color: white">
+            <div class="item1" id="file_name">用户数量：</div>
+            <div class="item2" id="server_id">4</div>
+        </div>
+    </div>
+</div>
+<div class="main" id="set_strategy_box1" style="left: 900px; display: none;">
+    <form class="form-horizontal" id="set_strategy" role="form">
+        <div class="form-group">
+            <label for="password" class="col-sm-2 control-label" style="font-size: 25px;color: darkred;display:inline-block; margin-left: -50px; width: 200px;" >任务参数：</label>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">聚合策略：</label>
+            <div class="col-sm-10">
+                <select class="group" id="aggregationtiming" name="aggregationtiming" style="text-align: center; height: 35px; border-radius: 10px;">
+                    <option value="True" selected>Asynchronize</option>
+                    <option value="False">Synchronize</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">学习率：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="learning_rate" name="learning_rate" oninput="OnInput (event)" value='0.1'>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">最大轮数：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="maxround" name="maxround" value="70">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">批大小：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="batchsize" name="batchsize" value="16">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">阈值：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="epsilon" name="epsilon" value="3">
+            </div>
+        </div>
+    </form>
+    <button class="button_source" id="complete_set1" style="left: 200px" onclick="complete_set(event)">完成设置</button>
+    <button class="button_source" id="cancel_set1" style="background-color: gray;" onclick="cancel_set(event)">取消设置</button>
+</div>
+<div class="main" style="left: 900px; display: block;" id="request" name="request">
+    <div id="Request1">
+        <div id="text">请求二</div>
+        <button class="button_source" id="seting_strategy2" onclick="show_seting(event)">设置策略</button>
+        <div id="text1">请求信息</div>
+        <div id="frame1">
+            <div class="item1" id="file_name">名称：</div>
+            <div class="item2" id="servicename2">Service</div>
+        </div>
+        <div id="frame1" style="background-color: white">
+            <div class="item1" id="file_name">简介：</div>
+            <div class="item2" id="servicebrief2">trainable</div>
+        </div>
+        <div id="frame1">
+            <div class="item1" id="file_name">细节：</div>
+            <div class="item2" id="servicedetail2" style="width: 250px; margin-left: 25px;">Service2 able to be trained</div>
+        </div>
+        <div id="frame1" style="background-color: white">
+            <div class="item1" id="file_name">奖励：</div>
+            <div class="item2" id="server_id">None</div>
+        </div>
+        <div id="frame1">
+            <div class="item1" id="file_name">已工作时间：</div>
+            <div class="item2" id="server_id">10s</div>
+        </div>
+        <div id="frame1" style="background-color: white">
+            <div class="item1" id="file_name">用户数量：</div>
+            <div class="item2" id="server_id">5</div>
+        </div>
+    </div>
+</div>
+<div class="main" id="set_strategy_box2" style="left: 900px; display: none;">
+    <form class="form-horizontal" id="set_strategy" role="form">
+        <div class="form-group">
+            <label for="password" class="col-sm-2 control-label" style="font-size: 25px;color: darkred;display:inline-block; margin-left: -50px; width: 200px;" >任务参数：</label>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">聚合策略：</label>
+            <div class="col-sm-10">
+                <select class="group" id="aggregationtiming" name="aggregationtiming" style="text-align: center; height: 35px; border-radius: 10px;">
+                    <option value="True" selected>Asynchronize</option>
+                    <option value="False">Synchronize</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">学习率：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="learning_rate" name="learning_rate" oninput="OnInput (event)" value='0.1'>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">最大轮数：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="maxround" name="maxround" value="70">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">批大小：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="batchsize" name="batchsize" value="16">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">阈值：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="epsilon" name="epsilon" value="3">
+            </div>
+        </div>
+    </form>
+    <button class="button_source" id="complete_set2" style="left: 200px" onclick="complete_set(event)">完成设置</button>
+    <button class="button_source" id="cancel_set2" style="background-color: gray;" onclick="cancel_set(event)">取消设置</button>
+</div>
+<div class="main" style="top: 730px;"  id="request" name="request">
+    <div id="Request1">
+        <div id="text">请求三</div>
+                <button class="button_source" id="seting_strategy3" onclick="show_seting(event)">设置策略</button>
+        <div id="text1">请求信息</div>
+        <div id="frame1">
+            <div class="item1" id="file_name">名称：</div>
+            <div class="item2" id="servicename3">Service</div>
+        </div>
+        <div id="frame1" style="background-color: white">
+            <div class="item1" id="file_name">简介：</div>
+            <div class="item2" id="servicebrief3">trainable</div>
+        </div>
+        <div id="frame1">
+            <div class="item1" id="file_name">细节：</div>
+            <div class="item2" id="servicedetail3" style="width: 250px; margin-left: 25px;">Service3 able to be trained</div>
+        </div>
+        <div id="frame1" style="background-color: white">
+            <div class="item1" id="file_name">奖励：</div>
+            <div class="item2" id="server_id">None</div>
+        </div>
+        <div id="frame1">
+            <div class="item1" id="file_name">已工作时间：</div>
+            <div class="item2" id="server_id">60s</div>
+        </div>
+        <div id="frame1" style="background-color: white">
+            <div class="item1" id="file_name">用户数量：</div>
+            <div class="item2" id="server_id">3</div>
+        </div>
+    </div>
+</div>
+<div class="main" id="set_strategy_box3" style="left: 900px; display: none;">
+    <form class="form-horizontal" id="set_strategy" role="form">
+        <div class="form-group">
+            <label for="password" class="col-sm-2 control-label" style="font-size: 25px;color: darkred;display:inline-block; margin-left: -50px; width: 200px;" >任务参数：</label>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">聚合策略：</label>
+            <div class="col-sm-10">
+                <select class="group" id="aggregationtiming" name="aggregationtiming" style="text-align: center; height: 35px; border-radius: 10px;">
+                    <option value="True" selected>Asynchronize</option>
+                    <option value="False">Synchronize</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">学习率：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="learning_rate" name="learning_rate" oninput="OnInput (event)" value='0.1'>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">最大轮数：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="maxround" name="maxround" value="70">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">批大小：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="batchsize" name="batchsize" value="16">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">阈值：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="epsilon" name="epsilon" value="3">
+            </div>
+        </div>
+    </form>
+    <button class="button_source" id="complete_set3" style="left: 200px" onclick="complete_set(event)">完成设置</button>
+    <button class="button_source" id="cancel_set3" style="background-color: gray;" onclick="cancel_set(event)">取消设置</button>
+</div>
+<div class="main" style="top: 730px; left: 900px;"  id="request" name="request">
+    <div id="Request1">
+        <div id="text">请求四</div>
+                <button class="button_source" id="seting_strategy4" onclick="show_seting(event)">设置策略</button>
+        <div id="text1">请求信息</div>
+        <div id="frame1">
+            <div class="item1" id="file_name">名称：</div>
+            <div class="item2" id="servicename4">Service</div>
+        </div>
+        <div id="frame1" style="background-color: white">
+            <div class="item1" id="file_name">简介：</div>
+            <div class="item2" id="servicebrief4">trainable</div>
+        </div>
+        <div id="frame1">
+            <div class="item1" id="file_name">细节：</div>
+            <div class="item2" id="servicedetail4" style="width: 250px; margin-left: 25px;">Service4 able to be trained</div>
+        </div>
+        <div id="frame1" style="background-color: white">
+            <div class="item1" id="file_name">奖励：</div>
+            <div class="item2" id="server_id">None</div>
+        </div>
+        <div id="frame1">
+            <div class="item1" id="file_name">已工作时间：</div>
+            <div class="item2" id="server_id">32s</div>
+        </div>
+        <div id="frame1" style="background-color: white">
+            <div class="item1" id="file_name">用户数量：</div>
+            <div class="item2" id="server_id">7</div>
+        </div>
+    </div>
+</div>
+<div class="main" id="set_strategy_box4" style="left: 900px; display: none;">
+    <form class="form-horizontal" id="set_strategy" role="form">
+        <div class="form-group">
+            <label for="password" class="col-sm-2 control-label" style="font-size: 25px;color: darkred;display:inline-block; margin-left: -50px; width: 200px;" >任务参数：</label>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">聚合策略：</label>
+            <div class="col-sm-10">
+                <select class="group" id="aggregationtiming" name="aggregationtiming" style="text-align: center; height: 35px; border-radius: 10px;">
+                    <option value="True" selected>Asynchronize</option>
+                    <option value="False">Synchronize</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">学习率：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="learning_rate" name="learning_rate" oninput="OnInput (event)" value='0.1'>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">最大轮数：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="maxround" name="maxround" value="70">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">批大小：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="batchsize" name="batchsize" value="16">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-sm-2_control-label" style="display:inline-block;">阈值：</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" id="epsilon" name="epsilon" value="3">
+            </div>
+        </div>
+    </form>
+    <button class="button_source" id="complete_set4" style="left: 200px" onclick="complete_set(event)">完成设置</button>
+    <button class="button_source" id="cancel_set4" style="background-color: gray;" onclick="cancel_set(event)">取消设置</button>
+</div>
+</html>

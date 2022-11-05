@@ -1,0 +1,152 @@
+.image{
+    margin-left: -115px;
+}
+
+.button1 {    /*选项按键*/
+    position: absolute;
+    top: 10px;
+    right: 300px;
+    border-radius: 30px;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: white;
+    display: inline-block;
+    text-decoration: none;
+    border: 1.5px solid #4169E1;
+    color: #4169E1;
+    margin-left: 55px;
+    margin-top: 10px;
+    outline: none;
+}
+
+.button2 {    /*选项按键*/
+    position: absolute;
+    top: 10px;
+    right: 100px;
+    border-radius: 30px;
+    padding: 5px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: #4169E1;
+    display: inline-block;
+    text-decoration: none;
+    border: 1.5px solid #4169E1;
+    color: white;
+    margin-left: 55px;
+    margin-top: 10px;
+    outline: none;
+}
+
+.button1:hover {
+    cursor: pointer;
+}
+
+.button2:hover {
+    cursor: pointer;
+}
+
+.regist-form {  /*中间框的位置*/
+    position: absolute;
+    left: 270px;
+    top: 150px;
+}
+
+.regist-form .form {  /*中间框*/
+    background-color: white;
+    width: 350px;
+    height: 330px;
+    padding-left: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-left: 800px;
+}
+
+.regist-form .form .exp1{ /*标语*/
+    width: 350px;
+    height: 50px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;    /*上下左右居中*/
+    align-items: center;
+    justify-content: left;
+    color: #606060;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.regist-form .form .item_username {  /*用户名输入框*/
+    border-radius: 10px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 15px;
+    width: 300px;
+    height: 20px;
+    outline: none;
+    border: 1.5px solid gray;
+}
+
+.regist-form .form .item_password {  /*密码输入框*/
+    border-radius: 10px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 15px;
+    width: 300px;
+    height: 20px;
+    outline: none;
+    border: 1.5px solid gray;
+}
+
+.regist-form .form .button_regist {   /*login点击按键*/
+    border-radius: 15px;
+    width: 345px;
+    height: 50px;
+    letter-spacing: 10px;
+    display: flex;    /*上下左右居中*/
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: dodgerblue;
+    color: white;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    outline: none;
+    border: none;
+}
+
+.regist-form .login {  /*忘记密码框*/
+    width: 400px;
+    height: 50px;
+    background-color: white;
+    display: flex;    /*上下左右居中*/
+    align-items: center;
+    justify-content: left;
+    padding-left: 30px;
+    font-size: 22px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    color: black;
+    margin-left: 800px;
+}
+
+.regist-form .login h6{
+    font-size: 15px;
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+}
+
+.regist-form .login .fp{
+    font-size: 15px;
+    font-weight: normal;
+    text-decoration: none;
+    color: royalblue;
+}
+
+.regist-form .form .button_regist:hover {
+    cursor: pointer;
+}

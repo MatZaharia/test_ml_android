@@ -1,0 +1,614 @@
+.option{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 70px;
+    width: 100%;
+    background: midnightblue;
+    text-align:center;
+}
+
+.option .button_source{
+    height: 70px;
+    width: 200px;
+    background: midnightblue;
+    color: white;
+    display: inline;    /*文字上下左右居中 inline并排显示*/
+    align-items: center;
+    justify-content: center;
+    margin-left: 50px;
+    font-size: 20px;
+    font-weight: normal;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.frame{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 150px;
+    background: midnightblue;
+    text-align:center;
+}
+
+.home{
+    width: 1500px;
+    height: 600px;
+    background-color: white;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px 0;
+    text-align: center;
+    color: black;
+    outline: 1px solid white;
+}
+
+.home .button{
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    display: inline;    /*文字上下左右居中 inline并排显示*/
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: normal;
+    background-color: darkblue;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    color: white;
+    margin-left: 25px;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.tasklist{
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    margin: auto;
+    margin-top: 70px;
+    padding: 20px 0;
+    text-align: center;
+    color: black;
+    outline: 1px solid white;
+}
+
+.tasklist .task{
+    position: absolute;
+    top: 60px;
+    left: 220px;
+    width: 1200px;
+    height: 300px;
+    background-color: white;
+    padding: 20px 0;
+    text-align: center;
+    color: black;
+    outline: 1px solid white;
+    transform: scale(0.9);
+}
+
+.tasklist .task .frame1{
+    height: 50px;
+    width: 250px;
+    background: dodgerblue;
+    color: white;
+    display: flex;    /*文字上下左右居中 inline并排显示*/
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 5px;
+}
+
+.tasklist .task .frame2{
+    position: absolute;
+    left: 900px;
+    top: 270px;
+    height: 50px;
+    width: 250px;
+    background: darkblue;
+    color: white;
+    display: flex;    /*文字上下左右居中 inline并排显示*/
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 5px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
+.tasklist .task .line{
+    position: absolute;
+    left: 0px;
+    top: 70px;
+    height: 5px;
+    width: 1200px;
+    background: dodgerblue;
+}
+
+.tasklist .task .text{
+    position: absolute;
+    height: 50px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 20px;
+    background: lightgrey;
+    display: flex;    /*文字上下左右居中 inline并排显示*/
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: normal;
+    color: black;
+    letter-spacing: 3px;
+}
+
+.tasklist .task .text .message{
+    height: 30px;
+    width: 250px;
+    background: white;
+    outline: none;
+    border: none;
+    margin-left: 10px;
+    display: flex;    /*文字上下左右居中 inline并排显示*/
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: normal;
+    color: red;
+    padding-left: 5px;
+}
+
+.strategy{
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    background: white;
+    border-radius: 30px;
+}
+
+.strategy .frame{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 100%;
+    height: 50px;
+    background: midnightblue;
+    color: white;
+    display: flex;    /*文字上下左右居中 inline并排显示*/
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 25px;
+    letter-spacing: 15px;
+}
+
+.strategy .form-horizontal .form-group .col-sm-10 .form-control{!important;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.strategy .form-horizontal .form-group{
+    margin-left: 80px;
+    margin-top: 45px;
+    transform: scale(1.2);
+}
+
+.strategy .form-horizontal .form-group .col-sm-10 .group{
+    border-radius: 10px;
+    text-align: center;
+    padding-left: 8px;
+    width: 300px;
+    height: 35px;
+    font-weight: normal;
+    font-size: 15px;
+    outline: none;
+    border-color: darkgrey;
+}
+
+.strategy .btn{
+    position: absolute;
+    left: 400px;
+    top: 500px;
+    height: 50px;
+    width: 150px;
+    background: dodgerblue;
+    color: white;
+    display: flex;    /*文字上下左右居中 inline并排显示*/
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.infolist{
+    position: relative;
+    height: 600px;
+    width: 1100px;
+    background-color: white;
+    margin: auto;
+    margin-top: 70px;
+    padding: 20px 0;
+    color: black;
+    outline: 1px solid white;
+}
+
+.infolist .bt{
+    position: absolute;
+    left: -220px;
+    background: midnightblue;
+    color: white;
+    width: 152px;
+    height: 50px;
+    display: flex;    /*上下左右居中*/
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: normal;
+    border: none;
+    outline: none;
+}
+
+.infolist .detail{
+    height: 500px;
+    width: 350px;
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    outline: 1px solid white;
+}
+
+.infolist .detail .frame{
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    height: 150px;
+    width: 50px;
+    background: dodgerblue;
+    color: white;
+    display: flex;    /*上下左右居中*/
+    align-items: center;
+    justify-content: center;
+    writing-mode: tb-rl;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 5px;
+}
+
+.infolist .detail .line{
+    position: absolute;
+    top: 70px;
+    left: 95px;
+    width: 5px;
+    height: 400px;
+    background: dodgerblue;
+}
+
+.infolist .detail .image{
+    position: absolute;
+    top: 50px;
+    left: 90px;
+}
+
+.infolist .detail .bt{
+    position: absolute;
+    top: 400px;
+    left: 200px;
+    border-radius: 10px;
+    width: 150px;
+    height: 40px;
+    display: flex;    /*上下左右居中*/
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: normal;
+    background: cadetblue;
+    color: white;
+    outline: none;
+    border: none;
+    letter-spacing: 3px;
+}
+
+.detail_box{
+    background-color: lightgrey;
+    position: absolute;
+    top: 100px;
+    left: 500px;
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding: 10px 0;
+    border-radius: 30px;
+    width: 700px;
+    height: 500px;
+}
+
+.detail_box .message{
+    position: absolute;
+    background: white;
+    outline: none;
+    border: none;
+    left: 30px;
+    top: 40px;
+    width: 500px;
+    color: black;
+    font-size: 30px;
+    font-weight: normal;
+    padding-left: 20px;
+}
+
+.detail_box .close1{
+    background-color: indianred;
+    border-radius: 20px;
+    width: 100px;
+    height: 50px;
+    display: flex;    /*上下左右居中*/
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: normal;
+    color: white;
+    position: absolute;
+    right: 40px;
+    top: 400px;
+    border: none;
+    outline: none;
+}
+
+.userlist{
+    position: relative;
+    height: 600px;
+    width: 1100px;
+    background-color: white;
+    margin: auto;
+    margin-top: 70px;
+    padding: 20px 0;
+    color: black;
+    outline: 1px solid white;
+}
+
+.userlist .image{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    left: 0px;
+    transform: scale(0.3);
+}
+
+.userlist .text{
+    position: absolute;
+    top: 60px;
+    left: 200px;
+    font-size: 27px;
+    font-weight: bold;
+    background: white;
+    padding: 5px;
+    border: none;
+}
+
+.userlist .bt{
+    position: absolute;
+    top: 60px;
+    left: 800px;
+    border-radius: 10px;
+    width: 150px;
+    height: 50px;
+    display: flex;    /*上下左右居中*/
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: normal;
+    background: red;
+    color: white;
+    outline: none;
+    border: none;
+    letter-spacing: 3px;
+}
+
+.userlist .line_hor{
+    width: 1100px;
+    height: 5px;
+    background: grey;
+    position: absolute;
+    left: 50px;
+    top: 150px;
+}
+
+.userlist .form-horizontal .form group {
+    width: 200px;!important;
+}
+
+.deploy_task{
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    left: 400px;
+    text-align: center;
+    color: white;
+    margin: auto;
+    padding: 10px 0;
+    border-radius: 30px;
+    width: 700px;
+    height: 500px;
+    border: 1.5px solid;
+    border-color: black;
+}
+
+.deploy_task .upload_file{
+    background-color: lightgrey;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    display: flex;    /*上下左右居中*/
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: normal;
+    color: black;
+    position: absolute;
+    left: 90px;
+    top: 100px;
+    border: none;
+    outline: none;
+}
+
+.deploy_task .create_file{
+    background-color: lightgrey;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    display: flex;    /*上下左右居中*/
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: normal;
+    color: black;
+    position: absolute;
+    right: 90px;
+    top: 100px;
+    border: none;
+    outline: none;
+}
+
+.deploy_task .close1{
+    background: indianred;
+    border-radius: 20px;
+    width: 100px;
+    height: 50px;
+    display: flex;    /*上下左右居中*/
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: normal;
+    color: white;
+    position: absolute;
+    right: 100px;
+    bottom: 100px;
+    border: none;
+    outline: none;
+}
+
+.create_task{
+    background-color: white;
+    position: absolute;
+    top: 100px;
+    left: 450px;
+    text-align: center;
+    margin: auto;
+    padding: 10px 0;
+    border-radius: 30px;
+    width: 600px;
+    height: 500px;
+}
+
+.create_task .frame{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    width: 100%;
+    height: 50px;
+    background: dodgerblue;
+    color: white;
+    display: flex;    /*文字上下左右居中 inline并排显示*/
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    font-size: 25px;
+    letter-spacing: 15px;
+}
+
+.create_task .form-horizontal{
+    overflow-x: hidden;
+    overflow-y: scroll;
+    height: 350px;
+    margin-top: 20px;
+}
+
+.create_task .form-horizontal::-webkit-scrollbar{/*滚动条里面轨道*/
+    border-radius: 10px;
+    background: #EDEDED;
+}
+
+.create_task .form-horizontal::-webkit-scrollbar-thumb {/*滚动条里面小方块*/
+    border-radius: 10px;
+    background: gray;
+
+}
+
+.create_task .form-horizontal .form-group .col-sm-10 .form-control{!important;
+    width: 200px;
+    border-radius: 10px;
+    margin-left: 70px;
+}
+
+.create_task .form-horizontal .form-group{
+    margin-left: 80px;
+    margin-top: 20px;
+    transform: scale(1.2);
+}
+
+.create_task .form-horizontal .form-group .col-sm-10 .group{
+    border-radius: 10px;
+    text-align: center;
+    width: 200px;
+    height: 35px;
+    font-weight: normal;
+    font-size: 15px;
+    color: black;
+    outline: none;
+    border-color: darkgrey;
+    margin-left: -65px;
+}
+
+.create_task .close1{
+    background: indianred;
+    border-radius: 20px;
+    width: 100px;
+    height: 50px;
+    display: flex;    /*上下左右居中*/
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: normal;
+    color: white;
+    position: absolute;
+    right: 50px;
+    bottom: 30px;
+    border: none;
+    outline: none;
+}
+
+.create_task .finish{
+    background: steelblue;
+    border-radius: 20px;
+    width: 200px;
+    height: 50px;
+    display: flex;    /*上下左右居中*/
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: normal;
+    color: white;
+    position: absolute;
+    left: 50px;
+    bottom: 30px;
+    border: none;
+    outline: none;
+}
+
+.create_task .form-horizontal .form-group label{
+    width:70px;
+    float:left;
+}
+
+
